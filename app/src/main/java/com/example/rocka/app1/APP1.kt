@@ -11,28 +11,39 @@ import kotlinx.android.synthetic.main.activity_app1.*
 class APP1 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_app1)
+            super.onCreate(savedInstanceState)
+            setContentView(R.layout.activity_app1)
 
-        // Button Show Click Event
-        btnShow.setOnClickListener {
-            Log.i("App1","BtnShow Clicked")
-            Toast.makeText(this,"Show button is clicked",Toast.LENGTH_SHORT).show()
-        }
+            // Button Show Click Event
+            btnShow.setOnClickListener {
+                Log.i("App1","BtnShow Clicked")
+                Toast.makeText(this,"Show button is clicked",Toast.LENGTH_SHORT).show()
+            }
 
-        // Button Send Data to Next Activity Click Event
-        btnSendDatatoNextActivity.setOnClickListener {
+            // Button Send Data to Next Activity Click Event
+            btnSendDatatoNextActivity.setOnClickListener {
 
-            val Message: String = txtUserMessage.text.toString()
-            Toast.makeText(this, Message, Toast.LENGTH_SHORT).show()
+                val Message: String = txtUserMessage.text.toString()
+                Toast.makeText(this, Message, Toast.LENGTH_SHORT).show()
 
-            // Used to Navigate from one screen to Other , this is Eplicit Intent
-            val intent = Intent(this, SecondActivity::class.java)
-            //It is used to Pass value from this screen to Other screen
-            intent.putExtra("User_Message",Message)
-            startActivity(intent)
-        }
+                // Used to Navigate from one screen to Other , this is Eplicit Intent
+                val intent = Intent(this, SecondActivity::class.java)
+                //It is used to Pass value from this screen to Other screen
+                intent.putExtra("User_Message",Message)
+                startActivity(intent)
+            }
 
+            btnShareData.setOnClickListener {
+                //Implicit Intent
+                val message:String=txtUserMessage.text.toString()
+                val intent= Intent()
+
+                intent.action=Intent.ACTION_SEND
+
+                intent.putExtra(Intent.EXTRA_TEXT,message)
+                intent.type="text/plain"
+                startActivity(Intent.createChooser(intent,"Share to: "))
+            }
     }
 
 
