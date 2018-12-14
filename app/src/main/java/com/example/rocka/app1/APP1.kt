@@ -44,6 +44,12 @@ class APP1 : AppCompatActivity() {
                 intent.type="text/plain"
                 startActivity(Intent.createChooser(intent,"Share to: "))
             }
+
+            btnRecyclerView.setOnClickListener {
+                
+                val intent=Intent(this,HobbiesActivity::class.java)
+                startActivity(intent)
+            }
     }
 
 
