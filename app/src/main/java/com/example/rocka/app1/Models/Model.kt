@@ -1,9 +1,9 @@
-package com.example.rocka.app1
+package com.example.rocka.app1.Models
 
 data class Hobby(var title:String)
 
-object supplier{
-    val hobbies= listOf<Hobby>(
+object supplier {
+    val hobbies = listOf(
         Hobby("Reading"),
         Hobby("Swimming"),
         Hobby("Cycling"),

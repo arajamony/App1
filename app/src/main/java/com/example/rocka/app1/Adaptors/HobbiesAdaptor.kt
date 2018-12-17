@@ -1,4 +1,4 @@
-package com.example.rocka.app1
+package com.example.rocka.app1.Adaptors
 
 import android.content.Context
 import android.content.Intent
@@ -7,13 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_app1.*
+import com.example.rocka.app1.Models.Hobby
+import com.example.rocka.app1.R
 import kotlinx.android.synthetic.main.list_item.view.*
-import java.text.FieldPosition
-import kotlin.contracts.Returns
 
 
-class HobbiesAdaptor(val context:Context,val hobbies:List<Hobby>):RecyclerView.Adapter<HobbiesAdaptor.myViewHolder>(){
+class HobbiesAdaptor(val context:Context,private val hobbies:List<Hobby>):RecyclerView.Adapter<HobbiesAdaptor.myViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): myViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.list_item, parent, false)
@@ -31,7 +30,7 @@ class HobbiesAdaptor(val context:Context,val hobbies:List<Hobby>):RecyclerView.A
 
     inner class myViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
 
-        var currentHobby:Hobby?=null
+        var currentHobby: Hobby?=null
         var currentPosition:Int =0
 
         init {
@@ -51,7 +50,7 @@ class HobbiesAdaptor(val context:Context,val hobbies:List<Hobby>):RecyclerView.A
             }
         }
 
-        fun SetData(hobby:Hobby?,Pos:Int) {
+        fun SetData(hobby: Hobby?, Pos:Int) {
             itemView.txvTitle.text = hobby!!.title
             this.currentHobby = hobby
             this.currentPosition = Pos

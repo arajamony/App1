@@ -1,10 +1,11 @@
-package com.example.rocka.app1
+package com.example.rocka.app1.Activities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.example.rocka.app1.R
 import kotlinx.android.synthetic.main.activity_app1.*
 
 
@@ -47,7 +48,7 @@ class APP1 : AppCompatActivity() {
 
             btnRecyclerView.setOnClickListener {
                 
-                val intent=Intent(this,HobbiesActivity::class.java)
+                val intent=Intent(this, HobbiesActivity::class.java)
                 startActivity(intent)
             }
     }
