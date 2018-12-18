@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".APP1"
+        tools:context=".Activities.APP1"
         android:padding="10dp">
 
 
@@ -26,6 +26,19 @@
             android:text="Send Data to Next Activity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:layout_centerHorizontal="true"
-            android:layout_alignParentTop="true" android:id="@+id/btnSendDatatoNextActivity" android:layout_marginTop="200dp"/>
+            android:layout_alignParentTop="true" android:id="@+id/btnSendDatatoNextActivity"
+            android:layout_marginTop="200dp"/>
+    <Button
+            android:text="Share Data to Other Apps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_alignParentStart="true"
+            android:layout_marginStart="4dp" android:layout_alignParentBottom="true" android:id="@+id/btnShareData"
+            android:layout_marginBottom="190dp"/>
+    <Button
+            android:text="Recycler View"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true" android:id="@+id/btnRecyclerView"
+            android:layout_marginBottom="78dp"/>
 
 </RelativeLayout>
