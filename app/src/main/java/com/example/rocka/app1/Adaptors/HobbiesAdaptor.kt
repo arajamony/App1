@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.example.rocka.app1.Activities.ShowMessage
 import com.example.rocka.app1.Models.Hobby
 import com.example.rocka.app1.R
 import kotlinx.android.synthetic.main.list_item.view.*
@@ -35,7 +36,7 @@ class HobbiesAdaptor(val context:Context,private val hobbies:List<Hobby>):Recycl
 
         init {
             itemView.setOnClickListener {
-                Toast.makeText(context, currentHobby!!.title, Toast.LENGTH_SHORT).show()
+                context.ShowMessage(currentHobby!!.title)
             }
 
             itemView.imgShare.setOnClickListener {
