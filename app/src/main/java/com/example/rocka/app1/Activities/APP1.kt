@@ -5,11 +5,16 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.example.rocka.app1.Models.Constants
 import com.example.rocka.app1.R
 import kotlinx.android.synthetic.main.activity_app1.*
 
 
 class APP1 : AppCompatActivity() {
+    //Companion objects must be declared inside the class used as a constants
+    companion object {
+        val Tag = APP1::class.java.simpleName // used to get the class name
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
@@ -17,8 +22,8 @@ class APP1 : AppCompatActivity() {
 
             // Button Show Click Event
             btnShow.setOnClickListener {
-                Log.i("App1","BtnShow Clicked")
-                ShowMessage("Show button is clicked")
+                Log.i(Tag, "BtnShow Clicked")
+                ShowMessage("Show button is clicked", Toast.LENGTH_LONG)
             }
 
             // Button Send Data to Next Activity Click Event
@@ -29,7 +34,7 @@ class APP1 : AppCompatActivity() {
                 // Used to Navigate from one screen to Other , this is Eplicit Intent
                 val intent = Intent(this, SecondActivity::class.java)
                 //It is used to Pass value from this screen to Other screen
-                intent.putExtra("User_Message",Message)
+                intent.putExtra(Constants.User_MessageKey, Message)
                 startActivity(intent)
             }
 

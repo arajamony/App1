@@ -36,23 +36,30 @@ class HobbiesAdaptor(val context:Context,private val hobbies:List<Hobby>):Recycl
 
         init {
             itemView.setOnClickListener {
-                context.ShowMessage(currentHobby!!.title)
+                currentHobby?.let {
+                    context.ShowMessage(currentHobby!!.title)
+                }
             }
 
             itemView.imgShare.setOnClickListener {
-                val message: String = "My Hobby is " + currentHobby!!.title
-                val intent = Intent()
 
-                intent.action = Intent.ACTION_SEND
+                currentHobby?.let {
+                    val message: String = "My Hobby is " + currentHobby!!.title
+                    val intent = Intent()
 
-                intent.putExtra(Intent.EXTRA_TEXT, message)
-                intent.type = "text/plain"
-                context.startActivity(Intent.createChooser(intent, "Share to: "))
+                    intent.action = Intent.ACTION_SEND
+
+                    intent.putExtra(Intent.EXTRA_TEXT, message)
+                    intent.type = "text/plain"
+                    context.startActivity(Intent.createChooser(intent, "Share to: "))
+                }
             }
         }
 
         fun SetData(hobby: Hobby?, Pos:Int) {
-            itemView.txvTitle.text = hobby!!.title
+            hobby?.let {
+                itemView.txvTitle.text = hobby.title
+            }
             this.currentHobby = hobby
             this.currentPosition = Pos
         }
