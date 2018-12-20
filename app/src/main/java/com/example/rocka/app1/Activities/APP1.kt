@@ -22,8 +22,8 @@ class APP1 : AppCompatActivity() {
 
             // Button Show Click Event
             btnShow.setOnClickListener {
-                Log.i(Tag, "BtnShow Clicked")
-                ShowMessage("Show button is clicked", Toast.LENGTH_LONG)
+                Log.i(Tag, resources.getString(R.string.msgShowbuttonisclicked))
+                ShowMessage(resources.getString(R.string.msgShowbuttonisclicked), Toast.LENGTH_LONG)
             }
 
             // Button Send Data to Next Activity Click Event

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">முதல் பயன்பாடு</string>
+    <string name="btnShow">காட்டு</string>
+    <string name="pholderEntertheText">உரை உள்ளிடவும்</string>
+    <string name="btnSendDatatoNextActivity">அடுத்த செயல்பாட்டிற்கு தரவு அனுப்பவும்</string>
+    <string name="btnShareDatatoOtherApps">பிற பயன்பாடுகளுக்கு தரவுகளைப் பகிரலாம்</string>
+    <string name="btnRecyclerView">மறுசுழற்சி பார்வை</string>
+    <string name="msgShowbuttonisclicked">பட்டன் ஷோ சொடுக்கப்பட்டுள்ளது</string>
+</resources>
