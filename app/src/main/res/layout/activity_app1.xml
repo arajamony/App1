@@ -18,24 +18,24 @@
     <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter the Text"
+            android:hint="@string/pholderEntertheText"
             android:ems="10"
             android:id="@+id/txtUserMessage" android:layout_alignParentTop="true"
             android:layout_marginTop="136dp" android:layout_alignParentStart="true" android:layout_marginStart="0dp"/>
     <Button
-            android:text="Send Data to Next Activity"
+            android:text="@string/btnSendDatatoNextActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:layout_centerHorizontal="true"
             android:layout_alignParentTop="true" android:id="@+id/btnSendDatatoNextActivity"
             android:layout_marginTop="200dp"/>
     <Button
-            android:text="Share Data to Other Apps"
+            android:text="@string/btnShareDatatoOtherApps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:layout_alignParentStart="true"
             android:layout_marginStart="4dp" android:layout_alignParentBottom="true" android:id="@+id/btnShareData"
             android:layout_marginBottom="190dp"/>
     <Button
-            android:text="Recycler View"
+            android:text="@string/btnRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true" android:id="@+id/btnRecyclerView"

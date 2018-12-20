@@ -1,4 +1,9 @@
 <resources>
-    <string name="app_name">App1</string>
+    <string name="app_name">First App</string>
     <string name="btnShow">SHOW</string>
+    <string name="pholderEntertheText">Enter the Text</string>
+    <string name="btnSendDatatoNextActivity">Send Data to Next Activity</string>
+    <string name="btnShareDatatoOtherApps">Share Data to Other Apps</string>
+    <string name="btnRecyclerView">Recycler View</string>
+    <string name="msgShowbuttonisclicked">Show button is clicked</string>
 </resources>
